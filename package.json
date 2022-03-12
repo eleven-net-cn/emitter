@@ -31,11 +31,11 @@
     "prepublishOnly": "yarn build",
     "lint": "eslint \"src/**/*.{js?(x),ts?(x)}\"",
     "lint:fix": "eslint \"src/**/*.{js?(x),ts?(x)}\" --fix",
+    "commit": "git cz",
     "changelog": "standard-version -n"
   },
   "gitHooks": {
     "pre-commit": "lint-staged --allow-empty",
-    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
     "commit-msg": "commitlint -E GIT_PARAMS"
   },
   "config": {
