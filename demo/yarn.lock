@@ -224,10 +224,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@e.fe/emitter@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@e.fe/emitter/-/emitter-1.0.0.tgz#eeace3e3967780c604e54fd816e4b34ccf729ae6"
-  integrity sha512-WQ5BQiveBZmlnMBfEvPHZrMLuBZXLYEVNXYaWnzHBRHsdNKPlvbc8/cvdVPWEE9WIdQCgGS9l3x3AtzjlVLCVA==
+"@e.fe/emitter@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@e.fe/emitter/-/emitter-1.0.1.tgz#1a00a674511c688bfa3b2e3393d74d2c0b432d40"
+  integrity sha512-7LCQl4iuNT5k9CRQnxgyqkAwSarPpHCysg19s08valVe5owOt6zLLmcMiwq79+WgflOlim4/e1dyjGMFeR+Wgg==
   dependencies:
     "@babel/runtime-corejs3" "^7.13.10"
 
