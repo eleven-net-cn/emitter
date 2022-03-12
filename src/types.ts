@@ -1,4 +1,6 @@
+type Fn = (...args: any) => any;
+
 export interface IEvent {
-  fn: ((...args: any) => any) & { _?: (...args: any) => any };
+  fn: Fn & { _?: Fn };
   ctx: any;
 }
