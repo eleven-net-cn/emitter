@@ -1,4 +1,4 @@
-# @e.fe/emitter
+# [@e.fe/emitter](https://www.npmjs.com/package/@e.fe/emitter)
 
 event emitter
 
