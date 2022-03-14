@@ -28,11 +28,10 @@
     "build": "concurrently \"rollup -c --environment NODE_ENV:production\" \"tsc\"",
     "test": "jest --coverage --watchAll",
     "demo": "cd demo && yarn start",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "yarn build && standard-version -n",
     "lint": "eslint \"src/**/*.{js?(x),ts?(x)}\"",
     "lint:fix": "eslint \"src/**/*.{js?(x),ts?(x)}\" --fix",
-    "commit": "git cz",
-    "changelog": "standard-version -n"
+    "commit": "git cz"
   },
   "gitHooks": {
     "pre-commit": "lint-staged --allow-empty",
