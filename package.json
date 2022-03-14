@@ -1,6 +1,6 @@
 {
   "name": "@e.fe/emitter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "自定义事件封装",
   "keywords": [],
   "main": "dist/emitter.js",
