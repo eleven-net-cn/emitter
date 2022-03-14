@@ -1,4 +1,4 @@
-import type { IEvent } from './types';
+import type { IEvent, Fn } from './types';
 
 class Emitter {
   private events: Record<string, IEvent[]> = {};
@@ -6,11 +6,11 @@ class Emitter {
   /**
    * 绑定
    * @param name 事件名称
-   * @param callback 回调函数，接收 emit 触发所有参数
-   * @param ctx 回调函数的执行上下文
+   * @param callback 事件回调函数，接收 emit 触发所有参数
+   * @param ctx 事件回调函数的执行上下文
    * @returns 返回this，支持链式调用
    */
-  on(name: string, callback: (...args: any) => any, ctx?: any) {
+  on(name: string, callback: Fn, ctx?: any) {
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     this.events[name] || (this.events[name] = []);
     this.events[name].push({
@@ -24,11 +24,11 @@ class Emitter {
   /**
    * 绑定事件（仅一次）
    * @param name 事件名称
-   * @param callback 回调函数，接收emit触发所有参数
-   * @param ctx 回调函数的执行上下文
+   * @param callback 事件回调函数，接收emit触发所有参数
+   * @param ctx 事件回调函数的执行上下文
    * @returns 返回this，支持链式调用
    */
-  once(name: string, callback: (...args: any) => any, ctx?: any) {
+  once(name: string, callback: Fn, ctx?: any) {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self = this;
 
@@ -66,7 +66,7 @@ class Emitter {
    * @param funcInQueue 事件对应的回调函数队列中某一函数
    * @returns 返回this，支持链式调用
    */
-  off(name: string, funcInQueue?: (...args: any) => any) {
+  off(name: string, funcInQueue?: Fn) {
     const evts: IEvent[] = this.events[name];
     const liveEvents: IEvent[] = [];
 
